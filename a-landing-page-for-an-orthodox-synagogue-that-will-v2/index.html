@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temple Beth Shalom - Orthodox Synagogue Community Bulletin Board" />
+  <meta name="keywords" content="synagogue, orthodox, jewish, community, temple, bulletins, events" />
+  <meta name="author" content="Temple Beth Shalom" />
+  <meta property="og:title" content="Temple Beth Shalom - Community Bulletin Board" />
+  <meta property="og:description" content="Stay connected with our Orthodox synagogue community through announcements, events, and more." />
+  <meta property="og:type" content="website" />
+  <title>Temple Beth Shalom - Community Bulletin Board</title>
+  
+  <!-- Preconnect to external domains for better performance -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://esm.sh">
+  
+  <!-- Favicon and app icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#1e3a8a" />
+  
+  <!-- Open Graph tags for social media -->
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop" />
+  <meta property="og:site_name" content="Temple Beth Shalom" />
+  
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Temple Beth Shalom - Community Bulletin Board" />
+  <meta name="twitter:description" content="Stay connected with our Orthodox synagogue community through announcements, events, and more." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=630&fit=crop" />
+  
+  <!-- Progressive Web App tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Temple Beth Shalom" />
+  
+  <!-- Base styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Enhanced Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: white;
+      font-size: 1.2rem;
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .loading-content {
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .loading-text {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
+    .loading-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* No Script fallback */
+    .no-js-warning {
+      background: #fee2e2;
+      color: #991b1b;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    /* App container fallback */
+    #app:empty::before {
+      content: 'Loading Temple Beth Shalom...';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-size: 1.2rem;
+      color: #6b7280;
+      background: #f9fafb;
+    }
+    
+    /* Progressive enhancement for faster loading */
+    @media (prefers-reduced-motion: reduce) {
+      .loading-screen {
+        animation: none;
+      }
+      
+      .loading-spinner {
+        animation: none;
+      }
+    }
+  </style>
+  
+  <!-- Import Map for React -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
+    }
+  }
+  </script>
+</head>
+<body>
+  <noscript>
+    <div class="no-js-warning">
+      JavaScript is required to run this application. Please enable JavaScript in your browser settings.
+    </div>
+  </noscript>
+  
+  <!-- App container -->
+  <div id="app">
+    <!-- Enhanced Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Temple Beth Shalom</div>
+        <p class="loading-subtitle">Preparing your community bulletin board...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main application script -->
+  <script type="module" src="./src/index.tsx"></script>
+  
+  <!-- Enhanced loading and performance scripts -->
+  <script>
+    // Enhanced loading screen management
+    window.addEventListener('load', () => {
+      const loadingScreen = document.querySelector('.loading-screen');
+      if (loadingScreen) {
+        setTimeout(() => {
+          loadingScreen.style.opacity = '0';
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 500);
+        }, 800); // Slightly longer delay for better UX
+      }
+    });
+    
+    // Performance monitoring
+    window.addEventListener('load', () => {
+      if ('performance' in window) {
+        setTimeout(() => {
+          try {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            if (perfData) {
+              const loadTime = Math.round(perfData.loadEventEnd - perfData.fetchStart);
+              console.log(`Page loaded in ${loadTime}ms`);
+              
+              // Report slow loading times
+              if (loadTime > 3000) {
+                console.warn(`Slow page load detected: ${loadTime}ms`);
+              }
+            }
+          } catch (error) {
+            console.warn('Performance monitoring failed:', error);
+          }
+        }, 100);
+      }
+    });
+    
+    // Enhanced touch and interaction handling
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+      const now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+    
+    // Service Worker registration (for future PWA features)
+    if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+      window.addEventListener('load', () => {
+        // Service worker registration would go here in a full PWA setup
+        console.log('Ready for service worker registration');
+      });
+    }
+    
+    // Connection-aware features
+    if ('connection' in navigator) {
+      const connection = navigator.connection;
+      if (connection) {
+        console.log('Connection info:', {
+          effectiveType: connection.effectiveType,
+          downlink: connection.downlink,
+          rtt: connection.rtt
+        });
+        
+        // Handle slow connections
+        if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+          console.warn('Slow connection detected - optimizing performance');
+          document.body.classList.add('slow-connection');
+        }
+      }
+    }
+    
+    // Error reporting for production
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', {
+        message: event.error?.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        stack: event.error?.stack
+      });
+    });
+    
+    // Unhandled promise rejection handling
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      event.preventDefault(); // Prevent default browser behavior
+    });
+    
+    // Detect and handle accessibility preferences
+    if (window.matchMedia) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Apply accessibility classes to body
+      if (prefersReducedMotion.matches) {
+        document.body.classList.add('reduce-motion');
+      }
+      
+      if (prefersHighContrast.matches) {
+        document.body.classList.add('high-contrast');
+      }
+      
+      if (prefersDarkMode.matches) {
+        document.body.classList.add('dark-mode');
+      }
+      
+      // Watch for changes in preferences
+      prefersReducedMotion.addEventListener('change', (e) => {
+        document.body.classList.toggle('reduce-motion', e.matches);
+      });
+      
+      prefersHighContrast.addEventListener('change', (e) => {
+        document.body.classList.toggle('high-contrast', e.matches);
+      });
+      
+      prefersDarkMode.addEventListener('change', (e) => {
+        document.body.classList.toggle('dark-mode', e.matches);
+      });
+    }
+  </script>
+</body>
+</html>

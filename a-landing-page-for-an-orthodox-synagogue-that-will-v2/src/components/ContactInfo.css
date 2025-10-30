@@ -1,0 +1,176 @@
+
+.contact-info {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-info h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.contact-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.holiday-schedule {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.holiday-schedule h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.holiday-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.holiday-date {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-icon {
+    font-size: 2.5rem;
+  }
+  
+  .holiday-schedule {
+    padding: 1.5rem;
+  }
+  
+  .holiday-schedule h3 {
+    font-size: 1.5rem;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .schedule-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    padding: 2rem 0;
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-card {
+    padding: 1rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .holiday-schedule h3 {
+    font-size: 1.3rem;
+  }
+}
